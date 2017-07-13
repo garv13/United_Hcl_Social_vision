@@ -28,8 +28,8 @@
                 <RadioButton x:Name="Scrap_Button" Tag="" Content="Create Scrape" Style="{StaticResource SplitViewNavButtonStyle}"
                         Click="Scrap_Button_Click"/>
 
-                <RadioButton x:Name="Store_Button" Tag="" Content="Store" IsChecked="True"
-                         Style="{StaticResource SplitViewNavButtonStyle}" Click="Store_Button_Click"/>
+                <!--<RadioButton x:Name="Store_Button" Tag="" Content="Store" IsChecked="True"
+                         Style="{StaticResource SplitViewNavButtonStyle}" Click="Store_Button_Click"/>-->
 
                 <RadioButton x:Name="Create_Diary_Botton" Tag="" Content="Create Diary/Tour"  Style="{StaticResource SplitViewNavButtonStyle}"
                 Click="Create_Diary_Botton_Click"/>

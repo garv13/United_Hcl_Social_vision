@@ -1,0 +1,28 @@
+﻿Pages List 
+	About Page
+	Activity Detail
+	Create Diary/Tour
+	Created Diary Upload 
+	Diary Store View
+	Diary Viewer
+	Immage tap detail
+	Login Page
+	Monument Detail
+	My Purchase
+	New Scrape 
+	OCR Detail
+	Scrape Form Page
+	Sign Up Page
+	Store Page
+	Tour Store View 
+	Tourist lens
+	Tourist Toolkit
+	Tour View
+	View Scrape
+
+
+
+Work
+	Linking of store page removed from all pages
+
+	

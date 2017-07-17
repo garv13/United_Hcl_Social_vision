@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,13 +22,25 @@ namespace VRDreamer
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class LandingPage : Page
-    {
+    { 
+         private IMobileServiceTable<User> Table = App.MobileService.GetTable<User>();
+         private MobileServiceCollection<User, User> items;
         public LandingPage()
         {
             this.InitializeComponent();
+            Loaded += LandingPage_Loaded;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void LandingPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Username Hardcoded
+            items = await Table.Where(User
+                           => User.UserName == "hcl").ToCollectionAsync();
+            App.userId = items[0].Id;
+            App.u = items[0];
+        }
+
+            private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(TouristToolkit));
         }

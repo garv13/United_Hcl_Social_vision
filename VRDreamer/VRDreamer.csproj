@@ -189,6 +189,11 @@
     <Content Include="Assets\list_monument.txt" />
     <Content Include="Assets\LoginIcon.png" />
     <Content Include="Assets\search-icon-hi.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\splash_screen.jpg" />
     <Content Include="Assets\Untitled2.jpg" />
     <Content Include="Assets\Untitled2.scale-400.jpg" />
     <Content Include="Properties\Default.rd.xml" />

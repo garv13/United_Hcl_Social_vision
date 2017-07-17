@@ -1,28 +1,30 @@
 ﻿Pages List 
 	About Page
-	Activity Detail
-	Create Diary/Tour
-	Created Diary Upload 
-	Diary Store View
-	Diary Viewer
-	Immage tap detail
-	Login Page
-	Monument Detail
-	My Purchase
-	New Scrape 
-	OCR Detail
-	Scrape Form Page
-	Sign Up Page
-	Store Page
-	Tour Store View 
-	Tourist lens
-	Tourist Toolkit
-	Tour View
-	View Scrape
+	Activity Detail //this may be added if vision api is used
+	~Create Diary/Tour
+	~Created Diary Upload 
+	~Diary Store View
+	~Diary Viewer
+	Immage tap detail // This is to give more info on tag
+	~Login Page
+	Monument Detail // to be replaced by trophy detail
+	~My Purchase
+	New Scrape //Adding tags in documentation we will say this will be mved to a seperate admin app
+	OCR Detail //same as before if possible a dropdown for diff language
+	Scrape Form Page // same as before move to admion app in future
+	~Sign Up Page
+	Store Page // Is directly accesible and linked to trophy detail
+	Tour Store View // store detail page
+	~Tourist lens
+	Tourist Toolkit // the main and only ar experience
+	~Tour View
+	~View Scrape
 
 
 
 Work
 	Linking of store page removed from all pages
 
+Convention
+	~ means page is no more needed
 	

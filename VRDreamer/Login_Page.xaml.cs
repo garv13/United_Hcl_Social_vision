@@ -1,6 +1,8 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -35,40 +37,8 @@ namespace VRDreamer
             this.InitializeComponent();
         }
 
-
-        async Task MakePredictionRequest()
-        {
-            var client = new HttpClient();
-
-            // Request headers - replace this example key with your valid subscription key.
-            client.DefaultRequestHeaders.Add("Prediction-Key", "2765249eb75041abb68e1dd99a8d917b");
-
-            // Prediction URL - replace this example URL with your valid prediction URL.
-            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/3ad1f885-103f-46a8-84a6-d197c140970d/url?iterationId=6f9f234f-cc0f-4124-ab10-140dc54578d0";
-            string img = "http://d2dzjyo4yc2sta.cloudfront.net/?url=images.pitchero.com%2Fui%2F1867965%2F1435918920_4727.jpg";
-            HttpResponseMessage response;
-            ASCIIEncoding encoding = new ASCIIEncoding();
-            // Request body. Try this sample with a locally stored image.
-            string imgUrl = "url:" + img;
-            byte[] byteData = Encoding.ASCII.GetBytes(imgUrl);
-
-
-            var content = new FormUrlEncodedContent(new[]
-            {
-                new KeyValuePair<string, string>("Url", img)
-            });
-
-
-
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                response = await client.PostAsync(url, content);
-        }
-
-
-
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await MakePredictionRequest();
             LoadingBar.Visibility = Visibility.Visible;
             LoadingBar.IsIndeterminate = true;
             try

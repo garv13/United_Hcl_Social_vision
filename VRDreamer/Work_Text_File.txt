@@ -1,4 +1,5 @@
 ﻿Pages List 
+	Main Page (new Page Added) //LAnding ppage doesnt have pivot
 	About Page
 	Activity Detail //this may be added if vision api is used
 				~Create Diary/Tour
@@ -23,12 +24,15 @@
 
 
 Work
-	Linking of store page removed from all pages
-	Pivot will have following pages
+	Linking of store page removed from all pages (done)
+	Pivot will have following pages (done)
 		-about
 		-Store
 		-create scrap
 		-ar experinece
+	Chnage tag of all pivots for ar to somthing like googles
+	Make new starting page(done)
+	Use untitled 2 for splash screen
 		
 
 Convention

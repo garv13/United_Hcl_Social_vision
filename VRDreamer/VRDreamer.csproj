@@ -126,6 +126,9 @@
     <Compile Include="Login_Page.xaml.cs">
       <DependentUpon>Login_Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Monument_Detail_View.cs" />
     <Compile Include="MyPurchased.xaml.cs">
       <DependentUpon>MyPurchased.xaml</DependentUpon>
@@ -185,6 +188,8 @@
     <Content Include="Assets\list_monument.txt" />
     <Content Include="Assets\LoginIcon.png" />
     <Content Include="Assets\search-icon-hi.png" />
+    <Content Include="Assets\Untitled2.jpg" />
+    <Content Include="Assets\Untitled2.scale-400.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -229,6 +234,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

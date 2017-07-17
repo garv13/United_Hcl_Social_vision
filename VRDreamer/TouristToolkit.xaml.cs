@@ -12,6 +12,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Devices.Geolocation;
@@ -375,8 +376,36 @@ namespace VRDreamer
 
 
         }
+
+
+        static async Task MakePredictionRequest(string imageFilePath)
+        {
+            var client = new HttpClient();
+
+            // Request headers - replace this example key with your valid subscription key.
+            client.DefaultRequestHeaders.Add("Prediction-Key", "2765249eb75041abb68e1dd99a8d917b");
+
+            // Prediction URL - replace this example URL with your valid prediction URL.
+            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/3ad1f885-103f-46a8-84a6-d197c140970d/url?iterationId=6f9f234f-cc0f-4124-ab10-140dc54578d0";
+            string img = "";
+            HttpResponseMessage response;
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            // Request body. Try this sample with a locally stored image.
+            string imgUrl = "Url:" + img;
+            byte[] byteData = encoding.GetBytes(imgUrl);
+
+            using (var content = new ByteArrayContent(byteData))
+            {
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                response = await client.PostAsync(url, content);
+            }
+        }
+
+
+
         private async void Web_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
         {
+
             Monument_Detail_View m = new Monument_Detail_View();
             m.MyLat = pos.Coordinate.Latitude;
             m.MyLon = pos.Coordinate.Longitude;

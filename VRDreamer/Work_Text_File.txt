@@ -24,6 +24,12 @@
 
 Work
 	Linking of store page removed from all pages
+	Pivot will have following pages
+		-about
+		-Store
+		-create scrap
+		-ar experinece
+		
 
 Convention
 	~ means page is no more needed

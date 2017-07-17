@@ -33,6 +33,8 @@ Work
 	Chnage tag of all pivots for ar to somthing like googles
 	Make new starting page(done)
 	Use untitled 2 for splash screen
+	remove traces of wherever wee use login id like we automatically pout user's id when he logins
+	remove the need for useris when viewing scrappes
 		
 
 Convention

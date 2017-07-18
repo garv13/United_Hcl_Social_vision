@@ -142,7 +142,7 @@ namespace VRDreamer
             }
             else
             {
-                rootFrame.Navigate(typeof(MainPage)); // added by me
+                rootFrame.Navigate(typeof(LandingPage)); // added by me
             }
         }
         // back button stop

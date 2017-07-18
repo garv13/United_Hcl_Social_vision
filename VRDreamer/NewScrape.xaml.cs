@@ -104,7 +104,7 @@ namespace VRDreamer
         private async void Application_Suspending(object sender, SuspendingEventArgs e)
         {
             // Handle global application events only if this page is active
-            if (Frame.CurrentSourcePageType == typeof(MainPage))
+            if (Frame.CurrentSourcePageType == typeof(NewScrape))
             {
                 var deferral = e.SuspendingOperation.GetDeferral();
                 await CleanupCameraAsync();
@@ -193,10 +193,7 @@ namespace VRDreamer
             Frame.Navigate(typeof(ScrapeForm), li);
         }
 
-        private void Create_Diary_Botton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Create_Diary_Tour));
-        }
+        
 
         private void About_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -213,11 +210,7 @@ namespace VRDreamer
             Frame.Navigate(typeof(NewScrape));
         }
 
-        private void Purchase_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
-
+        
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;

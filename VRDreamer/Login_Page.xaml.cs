@@ -54,7 +54,7 @@ namespace VRDreamer
                         //await msgbox.ShowAsync();
                         //App.userId = items[0].Id;
                         //App.u = items[0];
-                        Frame.Navigate(typeof(MainPage));
+                       // Frame.Navigate(typeof(MainPage));
                     }
                 }
                 else

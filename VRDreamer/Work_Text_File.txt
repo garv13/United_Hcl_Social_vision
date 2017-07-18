@@ -21,7 +21,20 @@
 				~Tour View
 				~View Scrape
 
-
+Models
+	~Diary
+	gogleplaces
+	monument detail
+	pointer
+	pointer view
+	pointerviewar
+	prediction response
+	purchgased
+	scrap
+	store listing
+	~tour
+	translate
+	user
 
 Work
 	Linking of store page removed from all pages (done)

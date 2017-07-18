@@ -106,19 +106,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Created_upload_Page.xaml.cs">
-      <DependentUpon>Created_upload_Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Create_Diary_Tour.xaml.cs">
-      <DependentUpon>Create_Diary_Tour.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Diary.cs" />
-    <Compile Include="DiaryViewer_Page.xaml.cs">
-      <DependentUpon>DiaryViewer_Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Diary_Store_View_Page.xaml.cs">
-      <DependentUpon>Diary_Store_View_Page.xaml</DependentUpon>
-    </Compile>
     <Compile Include="googlePlaceApi.cs" />
     <Compile Include="Image_Tapped_Detail.xaml.cs">
       <DependentUpon>Image_Tapped_Detail.xaml</DependentUpon>
@@ -130,9 +118,6 @@
       <DependentUpon>LandingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Monument_Detail_View.cs" />
-    <Compile Include="MyPurchased.xaml.cs">
-      <DependentUpon>MyPurchased.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NewScrape.xaml.cs">
       <DependentUpon>NewScrape.xaml</DependentUpon>
     </Compile>
@@ -160,14 +145,8 @@
       <DependentUpon>monument_Detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tour.cs" />
-    <Compile Include="TouristLens.xaml.cs">
-      <DependentUpon>TouristLens.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TouristToolkit.xaml.cs">
       <DependentUpon>TouristToolkit.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TourViewer_Page.xaml.cs">
-      <DependentUpon>TourViewer_Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tour_Store_View_Page.xaml.cs">
       <DependentUpon>Tour_Store_View_Page.xaml</DependentUpon>
@@ -219,22 +198,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Created_upload_Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Create_Diary_Tour.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DiaryViewer_Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Diary_Store_View_Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Image_Tapped_Detail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -246,10 +209,6 @@
     <Page Include="LandingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MyPurchased.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="NewScrape.xaml">
       <SubType>Designer</SubType>
@@ -280,15 +239,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TouristLens.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TouristToolkit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TourViewer_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

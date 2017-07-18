@@ -12,16 +12,16 @@
             <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Untitled2.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.85*"/>
+            <RowDefinition Height="0.15*"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
-        <Button Click="Button_Click" Grid.Row="1" Margin="40" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="-238,-0.667,-264,-10.667">
+        <Button Click="Button_Click" Grid.Row="1" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                 <Border CornerRadius="10" 
                     Background="Transparent" 
                     BorderBrush="White" 
@@ -38,8 +38,8 @@
             </StackPanel>
 
         </Button>
-        <Button Click="Button_Click_1" Grid.Row="1" Margin="40" Grid.Column="1" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="-238,-0.667,-264,-10.667">
+        <Button Click="Button_Click_1" Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                 <Border CornerRadius="10" 
                     Background="Transparent" 
                     BorderBrush="White" 

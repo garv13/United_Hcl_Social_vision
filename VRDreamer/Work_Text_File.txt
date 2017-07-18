@@ -32,13 +32,10 @@ Work
 		-ar experinece
 	Chnage tag of all pivots for ar to somthing like googles
 	Make new starting page(done)
-	Use untitled 2 for splash screen
-	remove traces of wherever wee use login id like we automatically pout user's id when he logins
-	remove the need for useris when viewing scrappes
-	i commented user u in aapp.xaml.cs. wherever error shows we have to correct it
-	we need to change the model as well
-	we only need scrape now ans store listing
-		
+	Use untitled 2 for splash screen (done)
+	remove traces of wherever wee use login id like we automatically pout user's id when he logins(done)
+	remove the need for useris when viewing scrappes(done)
+	new user added and hardcoded to remove above two points(done)
 
 Convention
 	~ means page is no more needed

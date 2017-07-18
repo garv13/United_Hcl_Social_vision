@@ -7,11 +7,13 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Devices.Geolocation;
@@ -73,6 +75,7 @@ namespace VRDreamer
    
         public TouristToolkit()
         {
+           
             blobUrl = "";
             this.InitializeComponent();
             i = 0;
@@ -375,8 +378,34 @@ namespace VRDreamer
 
 
         }
+
+        // custom vision api returning name and probability in string array
+        public async Task<string[]> CustomVisionApi(string url)
+        {
+            Uri requestUri = new Uri("https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/3ad1f885-103f-46a8-84a6-d197c140970d/url?iterationId=6f9f234f-cc0f-4124-ab10-140dc54578d0"); //replace your Url  
+            dynamic dynamicJson = new ExpandoObject();
+            dynamicJson.Url = url;
+            string json = "";
+            json = Newtonsoft.Json.JsonConvert.SerializeObject(dynamicJson);
+            var objClint = new System.Net.Http.HttpClient();
+            objClint.DefaultRequestHeaders.Add("prediction-key", "2765249eb75041abb68e1dd99a8d917b");
+
+            HttpResponseMessage respon = await objClint.PostAsync(requestUri, new StringContent(json, Encoding.UTF8, "application/json"));
+            string responJsonText = await respon.Content.ReadAsStringAsync();
+
+            PredictionResponse pr = new PredictionResponse();
+            pr = JsonConvert.DeserializeObject<PredictionResponse>(responJsonText);
+            string [] arr= new string[2];
+            arr[0] = pr.Predictions[0].Tag;
+            arr[1] = pr.Predictions[0].Probability.ToString();
+            return arr;
+        }
+
+
+
         private async void Web_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
         {
+
             Monument_Detail_View m = new Monument_Detail_View();
             m.MyLat = pos.Coordinate.Latitude;
             m.MyLon = pos.Coordinate.Longitude;

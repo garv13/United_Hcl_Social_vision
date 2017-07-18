@@ -63,70 +63,76 @@ namespace VRDreamer
             else
                 Loaded += Store_Loaded;
         }
+
         private async void Store_Loaded(object sender, RoutedEventArgs e)
         {
-            Tlist.Clear();
-            Dlist.Clear();
-            LoadingBar2.Visibility = Visibility.Visible;
-            LoadingBar2.IsActive = true;
-
-            try
-            {
-                //items1 = await Table1.ToCollectionAsync();
-                items2 = await Table2.ToCollectionAsync();
-                items3 = await Table3.ToCollectionAsync();
-
-                //foreach (Scrap si in items1)
-                //{
-                //    s = new StoreListing();
-                //    s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(this.BaseUri, "Assets/augmented-reality-for-blog.jpg")); // some static iage for scrap
-                //    s.Price = "Price: " + "Free";
-                //    s.Title = si.Title;
-                //    s.Id = si.Id;
-                //    s.MyId = si.Point_List;
-                //    s.Type = "S";
-                //    Slist.Add(s);
-                //}
-
-                foreach (Tour si in items2)
-                {
-                    s = new StoreListing();
-                    s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(si.Cover_Url)); // some static iage for scrap
-                    s.Price = "Price: " + si.Price.ToString();
-                    s.Title = si.Title;
-                    s.MyId = si.Scrap_List;
-                    s.UserId = si.UserId;
-                    s.Id = si.Id;
-                    s.Type = "T";
-                    Tlist.Add(s);
-                }
-
-                foreach (Diary si in items3)
-                {
-                    
-                    s = new StoreListing();
-                    s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(si.Cover_Url)); // some static iage for scrap
-                    s.Price = "Price: " + si.Price.ToString();
-                    s.Title = si.Title;
-                    s.Id = si.Id;
-                    s.UserId = si.UserId;
-                    s.MyId = si.Tour_List;
-                    s.Type = "D";
-                    Dlist.Add(s);
-                }
-                LoadingBar2.IsActive = false;
-                LoadingBar2.Visibility = Visibility.Collapsed;
-                DiaryView.DataContext = Dlist;
-                TourView.DataContext = Tlist;
-                //ScarpeView.DataContext = Slist;
-            }
-            catch(Exception)
-            {
-                MessageDialog msgbox = new MessageDialog("Sorry can't update now");
-                await msgbox.ShowAsync();
-                LoadingBar2.Visibility = Visibility.Collapsed;
-            }
         }
+
+        //Old Store Loaded func
+        //    private async void Store_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    Tlist.Clear();
+        //    Dlist.Clear();
+        //    LoadingBar2.Visibility = Visibility.Visible;
+        //    LoadingBar2.IsActive = true;
+
+        //    try
+        //    {
+        //        //items1 = await Table1.ToCollectionAsync();
+        //        items2 = await Table2.ToCollectionAsync();
+        //        items3 = await Table3.ToCollectionAsync();
+
+        //        //foreach (Scrap si in items1)
+        //        //{
+        //        //    s = new StoreListing();
+        //        //    s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(this.BaseUri, "Assets/augmented-reality-for-blog.jpg")); // some static iage for scrap
+        //        //    s.Price = "Price: " + "Free";
+        //        //    s.Title = si.Title;
+        //        //    s.Id = si.Id;
+        //        //    s.MyId = si.Point_List;
+        //        //    s.Type = "S";
+        //        //    Slist.Add(s);
+        //        //}
+
+        //        foreach (Tour si in items2)
+        //        {
+        //            s = new StoreListing();
+        //            s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(si.Cover_Url)); // some static iage for scrap
+        //            s.Price = "Price: " + si.Price.ToString();
+        //            s.Title = si.Title;
+        //            s.MyId = si.Scrap_List;
+        //            s.UserId = si.UserId;
+        //            s.Id = si.Id;
+        //            s.Type = "T";
+        //            Tlist.Add(s);
+        //        }
+
+        //        foreach (Diary si in items3)
+        //        {
+                    
+        //            s = new StoreListing();
+        //            s.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(si.Cover_Url)); // some static iage for scrap
+        //            s.Price = "Price: " + si.Price.ToString();
+        //            s.Title = si.Title;
+        //            s.Id = si.Id;
+        //            s.UserId = si.UserId;
+        //            s.MyId = si.Tour_List;
+        //            s.Type = "D";
+        //            Dlist.Add(s);
+        //        }
+        //        LoadingBar2.IsActive = false;
+        //        LoadingBar2.Visibility = Visibility.Collapsed;
+        //        DiaryView.DataContext = Dlist;
+        //        TourView.DataContext = Tlist;
+        //        //ScarpeView.DataContext = Slist;
+        //    }
+        //    catch(Exception)
+        //    {
+        //        MessageDialog msgbox = new MessageDialog("Sorry can't update now");
+        //        await msgbox.ShowAsync();
+        //        LoadingBar2.Visibility = Visibility.Collapsed;
+        //    }
+        //}
 
         //private void SearchButton3_Click(object sender, RoutedEventArgs e)
         //{
@@ -257,8 +263,8 @@ namespace VRDreamer
             StoreListing sent = e.ClickedItem as StoreListing;
             if (sent.Type == "S")
                 Frame.Navigate(typeof(ViewScrape), sent.Id);
-            else if (sent.Type == "D")
-                Frame.Navigate(typeof(Diary_Store_View_Page), sent);
+            //else if (sent.Type == "D")
+            //    Frame.Navigate(typeof(Diary_Store_View_Page), sent);
             else if (sent.Type == "T")
                 Frame.Navigate(typeof(Tour_Store_View_Page), sent);
         }
@@ -297,10 +303,10 @@ namespace VRDreamer
         //        Frame.Navigate(typeof(TourViewer_Page), t.Text);
         }
 
-        private void Create_Diary_Botton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Create_Diary_Tour));
-        }
+        //private void Create_Diary_Botton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(Create_Diary_Tour));
+        //}
 
         private void About_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -317,10 +323,10 @@ namespace VRDreamer
             Frame.Navigate(typeof(NewScrape));
         }
 
-        private void Purchase_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
+        //private void Purchase_Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(MainPage));
+        //}
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {

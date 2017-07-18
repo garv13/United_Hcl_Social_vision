@@ -384,14 +384,14 @@ namespace VRDreamer
         }
 
         // custom vision api returning name and probability in string array
-        public async Task<string[]> CustomVisionApi(string url)
+        public async Task<object[]> CustomVisionApi(string url)
         {
             Uri requestUri = new Uri("https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/3ad1f885-103f-46a8-84a6-d197c140970d/url?iterationId=6f9f234f-cc0f-4124-ab10-140dc54578d0"); //replace your Url  
             dynamic dynamicJson = new ExpandoObject();
             dynamicJson.Url = url;
             string json = "";
             json = Newtonsoft.Json.JsonConvert.SerializeObject(dynamicJson);
-            var objClint = new System.Net.Http.HttpClient();
+            var objClint = new HttpClient();
             objClint.DefaultRequestHeaders.Add("prediction-key", "2765249eb75041abb68e1dd99a8d917b");
 
             HttpResponseMessage respon = await objClint.PostAsync(requestUri, new StringContent(json, Encoding.UTF8, "application/json"));
@@ -399,9 +399,9 @@ namespace VRDreamer
 
             PredictionResponse pr = new PredictionResponse();
             pr = JsonConvert.DeserializeObject<PredictionResponse>(responJsonText);
-            string [] arr= new string[2];
+            object[] arr = new object[2];
             arr[0] = pr.Predictions[0].Tag;
-            arr[1] = pr.Predictions[0].Probability.ToString();
+            arr[1] = Convert.ToInt32(pr.Predictions[0].Probability);
             return arr;
         }
 
@@ -410,7 +410,11 @@ namespace VRDreamer
         private async Task Api()
         {
             //TODO call custom vision here if it succeds navigate to monument detail page
-            Monument_Detail_View m = new Monument_Detail_View();
+            object[] arr = await CustomVisionApi(blobUrl);
+            if ((int) arr[1] >=  0.5)
+            {
+                Monument_Detail_View m = new Monument_Detail_View();
+            }
             if (true) //use this if bracket to naviogate to monument detail page
             { }
             //m.MyLat = pos.Coordinate.Latitude;

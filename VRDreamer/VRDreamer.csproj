@@ -144,6 +144,7 @@
     <Compile Include="monument_Detail.xaml.cs">
       <DependentUpon>monument_Detail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StoreListingNew.cs" />
     <Compile Include="Tour.cs" />
     <Compile Include="TouristToolkit.xaml.cs">
       <DependentUpon>TouristToolkit.xaml</DependentUpon>

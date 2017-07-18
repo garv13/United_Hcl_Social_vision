@@ -40,7 +40,7 @@ namespace VRDreamer
             this.InitializeComponent();
         }
 
-
+        //TODO:make this func work 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             rec = new StoreListing();
@@ -63,7 +63,7 @@ namespace VRDreamer
                         recM.Id = items[0].Id;
                         recM.Title = items[0].Title;
                         recM.MyId = items[0].Point_List;
-                        recM.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(this.BaseUri, "Assets/augmented-reality-for-blog.jpg")); // image fromasset store
+                        recM.Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(this.BaseUri, "")); // image fromasset store
                         sl.Add(recM);
                     }
                 }

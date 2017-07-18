@@ -45,9 +45,11 @@ Work
 		-ar experinece
 	Chnage tag of all pivots for ar to somthing like googles
 	Make new starting page(done)
-	Use untitled 2 for splash screen
-	remove traces of wherever wee use login id like we automatically pout user's id when he logins
-	remove the need for useris when viewing scrappes
+	Use untitled 2 for splash screen(done)
+	make search func work in store 
+	make on navigation work in tour store view ( store detail)
+	remove traces of wherever wee use login id like we automatically pout user's id when he logins (done)
+	remove the need for useris when viewing scrappes (done) // maybe
 		
 
 Convention

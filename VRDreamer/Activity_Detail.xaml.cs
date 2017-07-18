@@ -46,10 +46,7 @@ namespace VRDreamer
             }
             DiaryView.DataContext = MList;
         }
-        private void Create_Diary_Botton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Create_Diary_Tour));
-        }
+       
 
         private void About_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -66,10 +63,7 @@ namespace VRDreamer
             Frame.Navigate(typeof(NewScrape));
         }
 
-        private void Purchase_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
+        
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {

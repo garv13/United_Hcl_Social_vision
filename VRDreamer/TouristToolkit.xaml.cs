@@ -367,12 +367,16 @@ namespace VRDreamer
                     await blockBlob.UploadFromStreamAsync(s);
                     ////await blockBlob.UploadFromFileAsync(captureStream);
                     blobUrl = blockBlob.StorageUri.PrimaryUri.ToString();
-                    var add = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36";
-                    var httpRequestMessage = new Windows.Web.Http.HttpRequestMessage(Windows.Web.Http.HttpMethod.Get, new Uri("http://www.google.com/searchbyimage?site=search&sa=X&image_url=" + blockBlob.StorageUri.PrimaryUri.ToString()));
-                    httpRequestMessage.Headers.Add("User-Agent", add);
-                    //items2 = await Table2.ToCollectionAsync();
-                    web.NavigateWithHttpRequestMessage(httpRequestMessage);
-                    web.DOMContentLoaded += Web_DOMContentLoaded;
+
+
+                    await Api();
+
+                    //var add = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36";
+                    //var httpRequestMessage = new Windows.Web.Http.HttpRequestMessage(Windows.Web.Http.HttpMethod.Get, new Uri("http://www.google.com/searchbyimage?site=search&sa=X&image_url=" + blockBlob.StorageUri.PrimaryUri.ToString()));
+                    //httpRequestMessage.Headers.Add("User-Agent", add);
+                    ////items2 = await Table2.ToCollectionAsync();
+                    //web.NavigateWithHttpRequestMessage(httpRequestMessage);
+                    //web.DOMContentLoaded += Web_DOMContentLoaded;
                 }
             }
 
@@ -403,38 +407,40 @@ namespace VRDreamer
 
 
 
-        private async void Web_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
+        private async Task Api()
         {
-
+            //TODO call custom vision here if it succeds navigate to monument detail page
             Monument_Detail_View m = new Monument_Detail_View();
-            m.MyLat = pos.Coordinate.Latitude;
-            m.MyLon = pos.Coordinate.Longitude;
-            bool con = false;
-            s = await web.InvokeScriptAsync("eval", new string[] { "document.documentElement.outerHTML;" });
-            try
-            {
-                int i = s.IndexOf("<a class=\"_gUb");
-                int j = s.IndexOf(">", i);
-                i = s.IndexOf("<", j);
-                s = s.Substring(j + 1, i - j - 1);
-                s = Check_File(s);
-                if (s != null)
-                    con = true;
-                //load file and get exact name and put it in s
-            }
-            catch
+            if (true) //use this if bracket to naviogate to monument detail page
             { }
-            //if match found
-            if (con)
-            {
-                m.Title = s;
-                button.IsEnabled = true;
-                button2.IsEnabled = true;
-                PB.Visibility = Visibility.Collapsed;
+            //m.MyLat = pos.Coordinate.Latitude;
+            //m.MyLon = pos.Coordinate.Longitude;
+            //bool con = false;
+            //s = await web.InvokeScriptAsync("eval", new string[] { "document.documentElement.outerHTML;" });
+            //try
+            //{
+            //    int i = s.IndexOf("<a class=\"_gUb");
+            //    int j = s.IndexOf(">", i);
+            //    i = s.IndexOf("<", j);
+            //    s = s.Substring(j + 1, i - j - 1);
+            //    s = Check_File(s);
+            //    if (s != null)
+            //        con = true;
+            //    //load file and get exact name and put it in s
+            //}
+            //catch
+            //{ }
+            ////if match found
+            //if (con)
+            //{
+            //    m.Title = s;
+            //    button.IsEnabled = true;
+            //    button2.IsEnabled = true;
+            //    PB.Visibility = Visibility.Collapsed;
 
-                Frame.Navigate(typeof(monument_Detail), m);
-                
-            }
+            //    Frame.Navigate(typeof(monument_Detail), m);
+
+            //}
             else
             {
                 VisionServiceClient cl = new VisionServiceClient("db82ef68dc95459fad7b46d7a50bb944");

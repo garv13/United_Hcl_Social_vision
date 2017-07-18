@@ -44,10 +44,10 @@ namespace VRDreamer
                     if (Password.Password == items[0].Password)
                     {
                         LoadingBar.Visibility = Visibility.Collapsed;
-                        MessageDialog msgbox = new MessageDialog("Welcome " + UserName.Text);
-                        await msgbox.ShowAsync();
-                        App.userId = items[0].Id;
-                        App.u = items[0];
+                        //MessageDialog msgbox = new MessageDialog("Welcome " + UserName.Text);
+                        //await msgbox.ShowAsync();
+                        //App.userId = items[0].Id;
+                        //App.u = items[0];
                         Frame.Navigate(typeof(MainPage));
                     }
                 }

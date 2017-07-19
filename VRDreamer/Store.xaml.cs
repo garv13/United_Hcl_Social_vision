@@ -35,13 +35,7 @@ namespace VRDreamer
     }
     public sealed partial class Store : Page
     {
-
-        private IMobileServiceTable<Scrap> Table1 = App.MobileService.GetTable<Scrap>();
-        private MobileServiceCollection<Scrap, Scrap> items1;
-        private IMobileServiceTable<Tour> Table2 = App.MobileService.GetTable<Tour>();
-        private MobileServiceCollection<Tour, Tour> items2;
-        private IMobileServiceTable<Diary> Table3 = App.MobileService.GetTable<Diary>();
-        private MobileServiceCollection<Diary, Diary> items3;
+        
         private IMobileServiceTable<StoreListingNew> Table4 = App.MobileService.GetTable<StoreListingNew>();
         private MobileServiceCollection<StoreListingNew, StoreListingNew> items4;
         StoreListing s = new StoreListing();

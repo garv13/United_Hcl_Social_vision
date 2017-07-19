@@ -11,13 +11,13 @@
     <AssemblyName>VRDreamer</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>VRDreamer_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>9EF59C99E04E19FD0500A28E4DFF5B656044D535</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>5FC2E1F602D4E8CD7B1F54DD4153468408DD3B13</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>C:\Users\garvj\Desktop\dreamer\AppPackages\</AppxPackageDir>
     <AppxBundle>Always</AppxBundle>
@@ -145,7 +145,6 @@
       <DependentUpon>monument_Detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="StoreListingNew.cs" />
-    <Compile Include="Tour.cs" />
     <Compile Include="TouristToolkit.xaml.cs">
       <DependentUpon>TouristToolkit.xaml</DependentUpon>
     </Compile>

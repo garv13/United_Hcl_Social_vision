@@ -68,10 +68,7 @@ namespace VRDreamer
         int i;
         private IMobileServiceTable<Scrap> Table3 = App.MobileService.GetTable<Scrap>();
         private MobileServiceCollection<Scrap, Scrap> items3;
-        private IMobileServiceTable<Tour> Table4 = App.MobileService.GetTable<Tour>();
-        private MobileServiceCollection<Tour,Tour> items4;
-
-
+       
    
         public TouristToolkit()
         {
@@ -213,21 +210,7 @@ namespace VRDreamer
                 pos = args.Position;
                 try
                 {
-                    string pur = App.u.TourPurchases;
-                    string[] purchases = pur.Split(',');
-
-                    items4 = await Table4.Where(t =>
-                    purchases.Contains(t.Id)).ToCollectionAsync();
-
-                    List<string> scrapeId = new List<string>();
-                    foreach (Tour t in items4)
-                    {
-                        string[] temp = t.Scrap_List.Split(',');
-                        for (int i = 0; i < temp.Length; i++)
-                        {
-                            scrapeId.Add(temp[i]);
-                        }
-                    }
+                    
                     myBool = false;
                     first = false;
 
@@ -236,7 +219,7 @@ namespace VRDreamer
                     && t.lat - pos.Coordinate.Latitude > -0.0018018018
                     && t.lon - pos.Coordinate.Longitude < 0.0018018020
                     && t.lon - pos.Coordinate.Longitude > -0.0018018020
-                    && (t.UserId == App.userId || scrapeId.Contains(t.Id))
+                    && (t.UserId == App.userId)
                     )).ToCollectionAsync();
 
                     myBool = true;
@@ -409,14 +392,13 @@ namespace VRDreamer
 
         private async Task Api()
         {
-            //TODO call custom vision here if it succeds navigate to monument detail page
+            //TODO pass result to detail page
             object[] arr = await CustomVisionApi(blobUrl);
             if ((int) arr[1] >=  0.5)
             {
                 Monument_Detail_View m = new Monument_Detail_View();
             }
-            if (true) //use this if bracket to naviogate to monument detail page
-            { }
+           
             //m.MyLat = pos.Coordinate.Latitude;
             //m.MyLon = pos.Coordinate.Longitude;
             //bool con = false;
@@ -494,7 +476,7 @@ namespace VRDreamer
 
                         Frame.Navigate(typeof(Ocr_Detail), text);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     { }
                 }
                 else

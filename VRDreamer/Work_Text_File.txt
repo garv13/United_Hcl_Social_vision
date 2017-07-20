@@ -55,4 +55,16 @@ Work
 
 Convention
 	~ means page is no more needed
-	
+	- needs to be fixed
+	* not tested
+
+Testing
+	tourist toolkit shows scrapes only new scrapes
+	new scrapes can be created
+	-landing page ui is awful (fixed)
+	-ar view button is not there in pivot
+	*ml features not tested
+	-about page
+	-store page need to add stuff
+	-change icon
+

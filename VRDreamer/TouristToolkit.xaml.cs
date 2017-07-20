@@ -112,9 +112,9 @@ namespace VRDreamer
                 //    pitch = pitch * 180 / Math.PI;
                 await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {
-                    for (; lol.Children.Count > 6;)
+                    for (; lol.Children.Count > 5;)
                     {
-                        lol.Children.RemoveAt(6);
+                        lol.Children.RemoveAt(5);
                     }
 
                     foreach (PointerViewAR n in li2)

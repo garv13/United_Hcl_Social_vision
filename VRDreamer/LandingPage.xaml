@@ -20,39 +20,27 @@
             <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
-        <Button Click="Button_Click" Grid.Row="1" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                <Border CornerRadius="10" 
-                    Background="Transparent" 
-                    BorderBrush="White" 
-                    BorderThickness="3"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Stretch"
-                        >
+        <Button Click="Button_Click" Grid.Row="1" HorizontalAlignment="Stretch" FontSize="20"  VerticalAlignment="Stretch" Background="#BDD80B12" BorderBrush="#FFF3E7E7" Margin="5">
+            <StackPanel HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+                
                     <TextBlock
                         HorizontalAlignment="Stretch"
                         Text="Start Tour" 
                            Margin="10" 
                            Foreground="White"/>
-                </Border>
+               
             </StackPanel>
 
         </Button>
-        <Button Click="Button_Click_1" Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Stretch" FontSize="35"  VerticalAlignment="Stretch" Background="{x:Null}">
+        <Button Click="Button_Click_1" Grid.Row="1" Background="#BDD80B12"  Grid.Column="1" HorizontalAlignment="Stretch" FontSize="20"  VerticalAlignment="Stretch" BorderBrush="#FFF3E7E7" Margin="5">
             <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                <Border CornerRadius="10" 
-                    Background="Transparent" 
-                    BorderBrush="White" 
-                    BorderThickness="3"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Stretch"
-                        >
+                
                     <TextBlock
                         HorizontalAlignment="Stretch"
                         Text="Browse The store" 
                            Margin="10" 
                            Foreground="White"/>
-                </Border>
+              
             </StackPanel>
 
         </Button>

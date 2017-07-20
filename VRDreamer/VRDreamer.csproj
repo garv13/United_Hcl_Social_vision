@@ -106,6 +106,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomVisionData.cs" />
     <Compile Include="Diary.cs" />
     <Compile Include="googlePlaceApi.cs" />
     <Compile Include="Image_Tapped_Detail.xaml.cs">

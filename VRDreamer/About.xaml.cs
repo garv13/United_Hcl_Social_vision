@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -29,9 +31,13 @@ namespace VRDreamer
             Loaded += About_Loaded;
 
         }
+        private IMobileServiceTable<CustomVisionData> Table = App.MobileService.GetTable<CustomVisionData>();
+        private MobileServiceCollection<CustomVisionData, CustomVisionData> items;
+
 
         private async void About_Loaded(object sender, RoutedEventArgs e)
         {
+            await Data_Entry_Code();
             await(new MessageDialog("Will be updated soon")).ShowAsync();
         }
 
@@ -69,5 +75,21 @@ namespace VRDreamer
         {
 
         }
+
+
+        // Data entry Code
+
+        private async Task Data_Entry_Code()
+        {
+            CustomVisionData ob = new CustomVisionData();
+            ob.Name = "Eropean Cup /UEFA Champions League;
+            ob.Image_Url = "http://www.newstalk.com/content/000/images/000190/196833_54_news_hub_168750_656x500.jpg";
+            ob.Desc = "The EFL Cup, currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.";
+            ob.Vidoe_Url = "https://youtu.be/qbvanVpUCUs";
+            await App.MobileService.GetTable<CustomVisionData>().InsertAsync(ob);
+
+        }
+
+
     }
 }

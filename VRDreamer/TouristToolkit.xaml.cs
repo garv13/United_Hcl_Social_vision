@@ -396,7 +396,7 @@ namespace VRDreamer
             object[] arr = await CustomVisionApi(blobUrl);
             if ((int) arr[1] >=  0.5)
             {
-                Monument_Detail_View m = new Monument_Detail_View();
+                Frame.Navigate(typeof(monument_Detail),arr[0]);
             }
            
             //m.MyLat = pos.Coordinate.Latitude;

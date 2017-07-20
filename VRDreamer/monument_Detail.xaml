@@ -41,7 +41,7 @@
         <SplitView.Content>
             <Grid Background="#292929" Padding="5,5,5,5">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.12*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="0.3*"/>
                     <RowDefinition Height="0.3*"/>
@@ -50,12 +50,14 @@
                     <ColumnDefinition Width="0.25*"/>
                     <ColumnDefinition Width="0.75*"/>
                 </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="LoadingBar" Grid.RowSpan="4" Foreground="Black" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"/>
                 <TextBlock Text="Details" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <Image x:Name="img" Source="{Binding Image}" MaxHeight="300" Grid.ColumnSpan="2" MaxWidth="300" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image x:Name="img" Source="{Binding Image}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <MediaPlayerElement x:Name="video" Source="{Binding video}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                 <TextBlock Text="Name" Grid.Row="2" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <!--<TextBlock Text="Vicinity" Grid.Row="3" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>-->
+                <TextBlock Text="Description" Grid.Row="3" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="name" Text="{Binding Title}" Grid.Row="2" Grid.Column="1" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                <!--<TextBlock x:Name="desc" Text="{Binding Desc}" Grid.Row="3" Grid.Column="1" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Stretch" TextWrapping="Wrap" HorizontalAlignment="Stretch"/>-->
+                <TextBlock x:Name="desc" Text="{Binding Desc}" Grid.Row="3" Grid.Column="1" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Stretch" TextWrapping="Wrap" HorizontalAlignment="Stretch"/>
             </Grid>
         </SplitView.Content>
     </SplitView>

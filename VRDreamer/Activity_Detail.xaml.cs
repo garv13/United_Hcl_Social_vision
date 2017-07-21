@@ -75,5 +75,10 @@ namespace VRDreamer
             Monument_Detail_View m = e.ClickedItem as Monument_Detail_View;
             Frame.Navigate(typeof(Store), m.Title);
         }
+
+        private void AR_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TouristToolkit));
+        }
     }
 }

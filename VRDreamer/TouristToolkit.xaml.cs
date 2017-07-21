@@ -738,6 +738,12 @@ namespace VRDreamer
         {
             Frame.Navigate(typeof(About));
         }
+
+        private void AR_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TouristToolkit));
+        }
+
         private void Store_Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Store));

@@ -103,6 +103,12 @@ namespace VRDreamer
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+
+        private void AR_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TouristToolkit));
+        }
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             foreach (char c in rec.Price)

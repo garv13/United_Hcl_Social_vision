@@ -68,7 +68,7 @@
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
 
 
-                <RadioButton x:Name="AR_Button" Tag="" Content="AR Guide" Style="{StaticResource SplitViewNavButtonStyle}"
+                <RadioButton x:Name="AR_Button" Tag="" Content="AR Guide" Style="{StaticResource SplitViewNavButtonStyle}"
                         Click="AR_Button_Click"/>
 
                 <RadioButton x:Name="Scrap_Button" Tag="" Content="Create Scrape" Style="{StaticResource SplitViewNavButtonStyle}"

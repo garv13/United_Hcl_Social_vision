@@ -158,5 +158,9 @@ namespace VRDreamer
             Frame.Navigate(typeof(Store), gp.results[0].name);
         }
 
+        private void AR_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TouristToolkit));
+        }
     }
 }

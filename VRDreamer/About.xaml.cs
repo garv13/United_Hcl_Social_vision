@@ -73,7 +73,7 @@ namespace VRDreamer
 
         private void AR_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(TouristToolkit));
         }
 
 

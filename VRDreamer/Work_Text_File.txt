@@ -51,6 +51,7 @@ Work
 	remove traces of wherever wee use login id like we automatically pout user's id when he logins (done)
 	remove the need for useris when viewing scrappes (done) :)
 	detail page par lekar jaa trophy ke success par - show its name and photo.. photo assets me daal diyo
+	generate screen shots
 		
 
 Convention
@@ -62,9 +63,9 @@ Testing
 	tourist toolkit shows scrapes only new scrapes
 	new scrapes can be created
 	-landing page ui is awful (fixed)
-	-ar view button is not there in pivot
+	-ar view button is not there in flipview (fixed)
 	*ml features not tested
 	-about page
-	-store page need to add stuff
+	-store page need to add stuff 
 	-change icon
 

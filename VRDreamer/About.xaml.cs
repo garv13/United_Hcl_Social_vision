@@ -37,7 +37,7 @@ namespace VRDreamer
 
         private async void About_Loaded(object sender, RoutedEventArgs e)
         {
-            await Data_Entry_Code();
+          //  await Data_Entry_Code();
             await(new MessageDialog("Will be updated soon")).ShowAsync();
         }
 
@@ -82,10 +82,10 @@ namespace VRDreamer
         private async Task Data_Entry_Code()
         {
             CustomVisionData ob = new CustomVisionData();
-            ob.Name = "Eropean Cup /UEFA Champions League";
+            ob.Name = "EFL Cup";
             ob.Image_Url = "http://www.newstalk.com/content/000/images/000190/196833_54_news_hub_168750_656x500.jpg";
             ob.Desc = "The EFL Cup, currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.";
-            ob.Vidoe_Url = "https://youtu.be/qbvanVpUCUs";
+            ob.Vidoe_Url = "https://vrdreamer.blob.core.windows.net/match-videos/EFL%20Cup%20Final%202017%20Celebrations%20-%20Manchester%20United.mp4";
             await App.MobileService.GetTable<CustomVisionData>().InsertAsync(ob);
 
         }

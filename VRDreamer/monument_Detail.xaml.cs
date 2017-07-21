@@ -60,9 +60,11 @@ namespace VRDreamer
                     video.Source = MediaSource.CreateFromUri(new Uri(items[0].Vidoe_Url));
                     _mediaPlayer = video.MediaPlayer;
                     _mediaPlayer.Play();
+                    LoadingBar.Visibility = Visibility.Collapsed;
+
                 }
-    
-               else
+
+                else
               { 
                 LoadingBar.Visibility = Visibility.Collapsed;
                 MessageDialog msgbox = new MessageDialog("No Match Found Sorry :(:(");

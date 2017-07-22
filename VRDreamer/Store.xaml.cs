@@ -40,8 +40,6 @@ namespace VRDreamer
         private MobileServiceCollection<StoreListingNew, StoreListingNew> items4;
         StoreListing s = new StoreListing();
         string[] words;
-        ObservableCollection<StoreListing> Slist = new ObservableCollection<StoreListing>();
-        ObservableCollection<StoreListing> Tlist = new ObservableCollection<StoreListing>();
         ObservableCollection<StoreListing> Dlist = new ObservableCollection<StoreListing>();
         public Store()
         {
@@ -52,7 +50,7 @@ namespace VRDreamer
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             string search = e.Parameter as string;
-            if (search != null)
+            if (search != "")
             {
                 await search_Func(search);
             }       
@@ -74,7 +72,7 @@ namespace VRDreamer
                     s.Price = "Price: " + si.Price;
                     s.Title = si.Name;
                     s.Id = si.Id;
-                    s.MyId = " ";
+                    s.MyId = si.Desc;
                     s.Type = si.Type;
                     Dlist.Add(s);
                 }
@@ -183,7 +181,6 @@ namespace VRDreamer
                 words = str1.Split(' ');
                 LoadingBar2.Visibility = Visibility.Visible;
                 LoadingBar2.IsActive = true;
-                Tlist.Clear();
                 Dlist.Clear();
                // items2 = await Table2.ToCollectionAsync();
                 items4 = await Table4.ToCollectionAsync();
@@ -262,7 +259,6 @@ namespace VRDreamer
                 LoadingBar2.IsActive = false;
                 LoadingBar2.Visibility = Visibility.Collapsed;
                 DiaryView.DataContext = Dlist;
-                //TourView.DataContext = Tlist;
             }
             catch(Exception)
             {
@@ -282,41 +278,7 @@ namespace VRDreamer
             //else if (sent.Type == "T")
             //    Frame.Navigate(typeof(Tour_Store_View_Page), sent);
         }
-        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-        //    Grid g = new Grid();
-        //    g = sender as Grid;
-        //    FrameworkElement type = null;
-        //    FrameworkElement id = null;
-        //    foreach (FrameworkElement child in g.Children)
-        //    {
-        //        if ((Grid.GetRow(child) == 2) && (Grid.GetColumn(child) == 1))
-        //        {
-        //            Border b = child as Border;
-
-        //            id = b.Child as FrameworkElement;
-        //        }
-
-
-        //        if ((Grid.GetRow(child) == 1) && (Grid.GetColumn(child) == 0))
-        //        {
-        //            Border b = child as Border;
-
-        //            type = b.Child as FrameworkElement;
-        //        }
-        //    }
-
-        //    TextBlock t = id as TextBlock;
-        //    TextBlock t2 = type as TextBlock;
-
-        //    if (t2.Text == "S")
-        //        Frame.Navigate(typeof(ViewScrape), t.Text);
-        //    else if (t2.Text == "D")
-        //        Frame.Navigate(typeof(DiaryViewer_Page), t.Text);
-        //    else if (t2.Text == "T")
-        //        Frame.Navigate(typeof(TourViewer_Page), t.Text);
-        }
-
+      
         //private void Create_Diary_Botton_Click(object sender, RoutedEventArgs e)
         //{
         //    Frame.Navigate(typeof(Create_Diary_Tour));

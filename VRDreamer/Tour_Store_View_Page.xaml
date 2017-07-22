@@ -108,39 +108,9 @@
                             </Grid>
 
                         </Grid>
-                        <Image x:Name="Cover" VerticalAlignment="Stretch" Stretch="Uniform"  HorizontalAlignment="Stretch" Grid.ColumnSpan="2"/>
+                        <Image x:Name="Cover" VerticalAlignment="Stretch" Stretch="Uniform"  HorizontalAlignment="Stretch" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
                     </Grid>
-                    <ListView         
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        HorizontalAlignment="Stretch"
-                        x:Name="StoreListView"
-                        VerticalAlignment="Stretch"
-                        ItemsSource="{Binding}"                       
-                        ItemTemplate="{StaticResource Standard3100x260ItemTemplate}"
-                        SelectionMode="None"          
-                        IsSwipeEnabled="True"
-                        IsItemClickEnabled="False"                
-                        ScrollViewer.HorizontalScrollMode="Auto"
-                        ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                        ScrollViewer.VerticalScrollMode="Auto"
-                        ScrollViewer.VerticalScrollBarVisibility="Auto"
-                        Visibility="Visible"
-                      >
-                    </ListView>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="0.1*"/>
-                            <RowDefinition Height="0.7*"/>
-                            <RowDefinition Height="0.2*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.7*"/>
-                            <ColumnDefinition Width="0.3*"/>
-                        </Grid.ColumnDefinitions>
-
-                    </Grid>
+                    <TextBlock x:Name="Desc" Text="{Binding Desc}"  FontSize="20" Foreground="White" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="WrapWholeWords" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5,0,0"/>
                 </Grid>
             </Grid>
         </SplitView.Content>

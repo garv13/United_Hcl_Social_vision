@@ -46,8 +46,8 @@ Work
 	Chnage tag of all pivots for ar to somthing like googles
 	Make new starting page(done)
 	Use untitled 2 for splash screen(done)
-	make search func work in store 
-	make on navigation work in tour store view ( store detail)
+	make search func work in store // store working
+	make on navigation work in tour store view ( store detail) // done
 	remove traces of wherever wee use login id like we automatically pout user's id when he logins (done)
 	remove the need for useris when viewing scrappes (done) :)
 	detail page par lekar jaa trophy ke success par - show its name and photo.. photo assets me daal diyo

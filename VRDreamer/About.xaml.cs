@@ -37,7 +37,8 @@ namespace VRDreamer
 
         private async void About_Loaded(object sender, RoutedEventArgs e)
         {
-          //  await Data_Entry_Code();
+            //  await Data_Entry_Code();
+         //   await Data_Entry_Store();
             await(new MessageDialog("Will be updated soon")).ShowAsync();
         }
 
@@ -90,6 +91,18 @@ namespace VRDreamer
 
         }
 
+
+        private async Task Data_Entry_Store()
+        {
+            StoreListingNew ob = new StoreListingNew();
+            ob.Name = "EFL Cup 40 cm";
+            ob.Image_Url = "http://www.newstalk.com/content/000/images/000190/196833_54_news_hub_168750_656x500.jpg";
+            ob.Desc = "The EFL Cup, currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.";
+            ob.Price = "400";
+            ob.Type = " ";
+           await App.MobileService.GetTable<StoreListingNew>().InsertAsync(ob);
+
+        }
 
     }
 }

@@ -38,7 +38,7 @@ namespace VRDreamer
         private async void About_Loaded(object sender, RoutedEventArgs e)
         {
             //  await Data_Entry_Code();
-         //   await Data_Entry_Store();
+            //await Data_Entry_Store();
             await(new MessageDialog("Will be updated soon")).ShowAsync();
         }
 
@@ -95,12 +95,12 @@ namespace VRDreamer
         private async Task Data_Entry_Store()
         {
             StoreListingNew ob = new StoreListingNew();
-            ob.Name = "EFL Cup 40 cm";
-            ob.Image_Url = "http://www.newstalk.com/content/000/images/000190/196833_54_news_hub_168750_656x500.jpg";
-            ob.Desc = "The EFL Cup, currently known as the Carabao Cup for sponsorship reasons, is an annual knockout football competition in men's domestic English football.";
-            ob.Price = "400";
+            ob.Name = "Winner photo frame";
+            ob.Image_Url = "http://i1.mirror.co.uk/incoming/article10494886.ece/ALTERNATES/s1200/Ajax-v-Manchester-United-UEFA-Europa-League-Final.jpg";
+            ob.Desc = "The UEFA Champions League is an annual continental club football competition organised by the Union of European Football Associations and contested by top-division European clubs.";
+            ob.Price = "250";
             ob.Type = " ";
-           await App.MobileService.GetTable<StoreListingNew>().InsertAsync(ob);
+            await App.MobileService.GetTable<StoreListingNew>().InsertAsync(ob);
 
         }
 

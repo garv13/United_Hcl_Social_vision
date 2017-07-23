@@ -46,6 +46,7 @@ namespace VRDreamer
             LoadingBar.IsIndeterminate = true;
             // m = e.Parameter as string;
             string s = e.Parameter as string;
+            s = "EFL Cup";
             try
             {
                 items = await Table.Where(CustomVisionData

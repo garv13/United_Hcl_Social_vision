@@ -50,7 +50,7 @@ namespace VRDreamer
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             string search = e.Parameter as string;
-            if (search != "")
+            if (search != "" && search!= null)
             {
                 await search_Func(search);
             }       

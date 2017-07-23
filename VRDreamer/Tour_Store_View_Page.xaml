@@ -67,11 +67,11 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="19*"/>
-                    <RowDefinition Height="22*"/>
+                    <RowDefinition Height="32*"/>
                     <RowDefinition Height="679*"/>
                 </Grid.RowDefinitions>
                 <ProgressBar HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" x:Name="LoadingBar"/>
-                <TextBlock Text="Product Details" Foreground="#CCCCCC" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,7" Grid.RowSpan="2"/>
+                <TextBlock Text="Product Detail" Foreground="#CCCCCC" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"  Grid.RowSpan="2"/>
                 <Grid x:Name="descBoxGrid" Grid.Row="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.4*"/>

@@ -59,7 +59,7 @@
                 <TextBlock Text="Name" Grid.Row="2" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                 <TextBlock Text="Description" Grid.Row="3" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="name" Text="{Binding Title}" Grid.Row="2" Grid.Column="2" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <TextBlock x:Name="desc" Text="{Binding Desc}" Grid.Row="3" Grid.Column="2" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Stretch" TextWrapping="WrapWholeWords" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="desc" Text="{Binding Desc}" Grid.Row="3" Grid.Column="2" Foreground="#CCCCCC" FontSize="26" VerticalAlignment="Stretch" TextWrapping="WrapWholeWords" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
             </Grid>
         </SplitView.Content>
     </SplitView>

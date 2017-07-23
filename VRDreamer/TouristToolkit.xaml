@@ -24,16 +24,16 @@
 
 
                 <RadioButton x:Name="AR_Button" Tag="" Content="AR Guide" Style="{StaticResource SplitViewNavButtonStyle}"
-                        Click="AR_Button_Click"/>
+                        Click="AR_Button_Click" IsChecked="True"/>
 
                 <RadioButton x:Name="Scrap_Button" Tag="" Content="Create Scrape" Style="{StaticResource SplitViewNavButtonStyle}"
                         Click="Scrap_Button_Click"/>
 
-                <RadioButton x:Name="Store_Button" Tag="" Content="Store" IsChecked="True"
+                <RadioButton x:Name="Store_Button" Tag="" Content="Store" 
                          Style="{StaticResource SplitViewNavButtonStyle}" Click="Store_Button_Click"/>
 
-                
-                
+
+
 
                 <RadioButton x:Name="About_Button" Tag="" Content="About" Style="{StaticResource SplitViewNavButtonStyle}"
                          Click="About_Button_Click"/>
@@ -44,18 +44,19 @@
 
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="lol">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="23*"/>
 
                 </Grid.RowDefinitions>
                 <Button x:Name="button" Click="button_Click" Content="Get Info" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Button x:Name="button2" Click="button_Click" Content="Get Info" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <ProgressBar x:Name="PB" Grid.Row="0" IsIndeterminate="True" Visibility="Collapsed" Grid.RowSpan="2" HorizontalAlignment="Stretch" Height="10" Margin="19,37,0,0" VerticalAlignment="Stretch" Width="100"/>
+                <ProgressBar x:Name="PB" Grid.Row="2" IsIndeterminate="True" Visibility="Collapsed" HorizontalAlignment="Stretch" Height="10" Margin="575,205.656,555,336" VerticalAlignment="Stretch" Width="100"/>
 
                 <!--<WebView x:Name="web" HorizontalAlignment="Left" Height="153" Margin="15000,207,0,0" VerticalAlignment="Top" Width="338"/>-->
-                <TextBlock x:Name="textBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Searching for GPS" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Searching for GPS" VerticalAlignment="Top" Margin="556,0,555,0"/>
 
-                <CaptureElement Tapped="PreviewControl_Tapped" Grid.Row="1" Name="PreviewControl" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <CaptureElement Tapped="PreviewControl_Tapped" Grid.Row="1" Name="PreviewControl" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2"/>
             </Grid>
         </SplitView.Content>
     </SplitView>
